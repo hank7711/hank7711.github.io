@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<link rel="icon" type="image/x-ico" href="icon.ico" />
+<style>
+    body {background-color: powderblue;}
+    h1   {color: rgba(60, 0, 255, 0.564);}
+    p    {color: rgb(17, 0, 255);}
+    </style>
+</head>
+<body>
+<h1>SU, Po-Han (蘇柏翰)</h1>
+<img src="profile_photo.png" alt=" " width="250" height="250">
+
+
+
+<script>
+    function setDate() {
+        var NowDate=new Date();
+　      var h=NowDate.getHours();
+　      var m=NowDate.getMinutes();
+　      var s=NowDate.getSeconds();
+        var yy=NowDate.getFullYear();
+        var mm=NowDate.getMonth()+1;
+        var dd=NowDate.getDate();
+        document.getElementById('showbox').innerHTML = +mm +'-'+ dd +'-'+yy+' '+h+':'+m+':'+s;
+    }
+
+  setInterval(setDate, 1000);
+
+  setDate();
+</script>
+
+
+
+<p>* Student in <a style="color:red;" href="https://www.ntu.edu.tw/">National Taiwan University</a>.</p>
+<p>* Major in <a style="color:red;" href="https://web.ee.ntu.edu.tw/">Electrical Engineering</a>.</p>
+<p>* Studied in <a style="color:red;" href="https://www.tnfsh.tn.edu.tw/">National Tainan First Senior High School</a>.</p>
+<p>* Some of my hobbies: </p>
+<p>&#160&#160&#160- Playing table tennis (<a style="color:red;" href="https://en.wikipedia.org/wiki/Table_tennis">Wiki</a>)</p>
+<p>&#160&#160&#160- Riding bicycle (<a style="color:red;" href="https://en.wikipedia.org/wiki/Bicycle">Wiki</a>)</p>
+<p>&#160&#160&#160- Watching on Youtube (<a style="color:red;" href="https://www.youtube.com/">Link</a>)</p>
+<br> 
+<p style="color:rgb(0, 0, 0);"> 現在時間 : </p>
+<div id="showbox"></div>
+        </body>
+<br>
+<audio controls autoplay loop>
+    <source src="Music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<br> <br>
+
+</body>
+</html>
