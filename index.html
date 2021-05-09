@@ -17,14 +17,8 @@
 
 <script>
     function setDate() {
-        var NowDate=new Date();
-　      var h=NowDate.getHours();
-　      var m=NowDate.getMinutes();
-　      var s=NowDate.getSeconds();
-        var yy=NowDate.getFullYear();
-        var mm=NowDate.getMonth()+1;
-        var dd=NowDate.getDate();
-        document.getElementById('showbox').innerHTML = +mm +'-'+ dd +'-'+yy+' '+h+':'+m+':'+s;
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = ((dt.getMonth()+1)) +"-"+ (("0"+(dt.getDate())).slice(-2)) +"-"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
     }
 
   setInterval(setDate, 1000);
@@ -42,9 +36,7 @@
 <p>&#160&#160&#160- Riding bicycle (<a style="color:red;" href="https://en.wikipedia.org/wiki/Bicycle">Wiki</a>)</p>
 <p>&#160&#160&#160- Watching on Youtube (<a style="color:red;" href="https://www.youtube.com/">Link</a>)</p>
 <br> 
-<p style="color:rgb(0, 0, 0);"> 現在時間 : </p>
-<div id="showbox"></div>
-        </body>
+<p> 現在時間 : <span id="datetime"></span> </p>
 <br>
 <audio controls autoplay loop>
     <source src="Music.mp3" type="audio/mpeg">
